@@ -13,12 +13,8 @@ import java.util.Scanner;
  * A game to guess random number, it will show the correct number with same position as (c), 
  * number presents but position different as (p), wrong number as (x).
  */
-public class GuessTheNumber_Game {
-
-	/**
-	 * @param args
-	 */
-	
+public class GuessTheNumber_Game 
+{	
 	Scanner sc;
 	int random_arr[]; //= {1,2,2,1};
 	int user_arr[];
@@ -86,15 +82,13 @@ public class GuessTheNumber_Game {
 			System.out.println(e.getMessage());
 			toGetRandom_Number();
 		}
-//		catch (GuessNumberException e) 
-//		{
-//			// TODO Auto-generated catch block
-//			System.out.println(e.getMessage());
-//			toGetRandom_Number();
-//		}
+		catch (GuessNumberException e) 
+		{
+			System.out.println(e.getMessage());
+			toGetRandom_Number();
+		}
 		catch (Exception e) 
 		{
-			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 			
 		}
@@ -158,13 +152,11 @@ public class GuessTheNumber_Game {
 		} 
 		catch (GuessNumberException e) 
 		{
-			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 			toGetUser_Number();
 		}
 		catch (Exception e) 
 		{
-			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());	
 		}		
 	}
@@ -357,8 +349,8 @@ public class GuessTheNumber_Game {
 		}
   }
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) 
+	{
 		System.out.println("\n\n c - correct number and correct position \n p - correct number but position wrong \n x - wrong number\n");
 		GuessTheNumber_Game obj=new GuessTheNumber_Game();
 		try
