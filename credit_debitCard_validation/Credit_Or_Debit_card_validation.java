@@ -19,10 +19,6 @@ import java.util.Scanner;
  */
 
 public class Credit_Or_Debit_card_validation {
-
-	/**
-	 * @param args
-	 */
 	
 	Scanner sc;
 	long num;
@@ -81,19 +77,17 @@ public class Credit_Or_Debit_card_validation {
 		}
 		catch (CreditCardException e) 
 		{
-			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 			toGet_userCardNumber();
 		}
 		catch (Exception e) 
 		{
-			// TODO Auto-generated catch block
 			System.out.println(e.getMessage());
 		}
 	}
 	
-	private boolean toFind_card(int card_length) {
-		// TODO Auto-generated method stub
+	private boolean toFind_card(int card_length) 
+	{
 		switch(arr[0])
 		{
 		case 3:
@@ -202,8 +196,8 @@ public class Credit_Or_Debit_card_validation {
 		}
 	}
 
-	private int toCheckLength(long num2) {
-		// TODO Auto-generated method stub
+	private int toCheckLength(long num2) 
+	{
 		int count=0;
 		while(num2>0)
 		{
@@ -242,15 +236,15 @@ public class Credit_Or_Debit_card_validation {
 	}
 	
 	
-	private void toDisplay() {
-		// TODO Auto-generated method stub
+	private void toDisplay() 
+	{
 		System.out.println();
 		for(int i:arr)
 			System.out.print(i);
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args)
+	{
 		Credit_Or_Debit_card_validation obj=new Credit_Or_Debit_card_validation();
 		obj.toGet_userCardNumber();
 	}
