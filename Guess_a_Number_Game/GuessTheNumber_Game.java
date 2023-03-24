@@ -20,7 +20,7 @@ public class GuessTheNumber_Game {
 	 */
 	
 	Scanner sc;
-	int random_arr[]= {1,2,2,1};
+	int random_arr[]; //= {1,2,2,1};
 	int user_arr[];
 	int count_random[];
 	int count_user[];
@@ -46,26 +46,26 @@ public class GuessTheNumber_Game {
 		System.out.println("Enter the digit range of number that you want to guess:");
 		try 
 		{
-//			range=sc.nextInt();
-//			
-//			if(range<=0)
-//			{
-//				throw new GuessNumberException(Error_msg_GuessNumber.err5_range_low_0);
-//			}
-//			if(range>10)
-//			{
-//				throw new GuessNumberException(Error_msg_GuessNumber.err4_range_restrict);
-//			}
-//			
-//			Random r=new Random();
-//			random_arr=new int[range];
-//			random_number="";				
-//			
-//			for(int i=0;i<range;i++)
-//			{
-//				random_arr[i]=r.nextInt(9);		
-//				random_number+=random_arr[i];
-//			}
+			range=sc.nextInt();
+			
+			if(range<=0)
+			{
+				throw new GuessNumberException(Error_msg_GuessNumber.err5_range_low_0);
+			}
+			if(range>10)
+			{
+				throw new GuessNumberException(Error_msg_GuessNumber.err4_range_restrict);
+			}
+			
+			Random r=new Random();
+			random_arr=new int[range];
+			random_number="";				
+			
+			for(int i=0;i<range;i++)
+			{
+				random_arr[i]=r.nextInt(9);		
+				random_number+=random_arr[i];
+			}
 			
 			/* !$ user notice to test: $!
 			 * if any one want to test their number please comment above all upto range=sc.nextInt and 
